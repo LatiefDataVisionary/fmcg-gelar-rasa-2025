@@ -58,7 +58,7 @@ Untuk menjalankan analisis ini di lingkungan lokal, ikuti langkah-langkah beriku
 
 1.  **Clone Repository**
     ```bash
-    git clone https://github.com/NAMAPENGGUNAANDA/fmcg-gelar-rasa-2025.git
+    git clone https://github.com/LatiefDataVisionary/fmcg-gelar-rasa-2025.git
     cd fmcg-gelar-rasa-2025
     ```
 
