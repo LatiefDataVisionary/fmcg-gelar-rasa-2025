@@ -98,21 +98,21 @@ Detail lebih lanjut mengenai setiap kolom dapat ditemukan di file `README_FMCG_P
 
 Proyek ini mengikuti alur kerja *data science* yang terstruktur:
 
-1.  **Eksplorasi Data & Preprocessing (`notebooks/01_eda_dan_preprocessing.ipynb`)**:
+1.  **Eksplorasi Data & Preprocessing**:
     -   Memuat dataset dan melakukan analisis data eksplorasi (EDA) untuk memahami karakteristik data.
     -   Membersihkan data (menangani nilai yang hilang, duplikat, dan anomali).
     -   Melakukan visualisasi awal untuk mendapatkan *insight*.
 
-2.  **Feature Engineering (`notebooks/02_feature_engineering.ipynb`)**:
+2.  **Feature Engineering**:
     -   Membuat fitur-fitur baru (misalnya, fitur berbasis waktu, agregasi penjualan) untuk memperkaya dataset dan meningkatkan performa model.
     -   Melakukan seleksi fitur untuk memilih variabel yang paling relevan.
 
-3.  **Modeling & Evaluasi (`notebooks/03_modeling_dan_evaluasi.ipynb`)**:
+3.  **Modeling & Evaluasi**:
     -   Membangun pipeline model prediktif (misalnya, *Time Series Forecasting* seperti ARIMA, atau model regresi seperti XGBoost).
     -   Melatih model pada data training dan mengevaluasi performanya pada data validasi menggunakan metrik yang relevan (MSE, RMSE, MAPE).
     -   Melakukan analisis kanibalisasi produk berdasarkan hasil prediksi.
 
-4.  **Presentasi Hasil & Pengumpulan (`submissions/submission_GelarRasa2025.ipynb`)**:
+4.  **Presentasi Hasil & Pengumpulan**:
     -   Menggabungkan semua analisis, model, dan temuan ke dalam satu notebook yang rapi dan mudah diikuti.
     -   Menyajikan hasil dalam bentuk visualisasi yang jelas dan memberikan rekomendasi strategis berdasarkan *insight* yang didapat.
 
@@ -120,17 +120,28 @@ Proyek ini mengikuti alur kerja *data science* yang terstruktur:
 
 ### 📈 Ringkasan Hasil & Temuan
 
-*(Di bagian ini, Anda akan mengisi temuan-temuan kunci dari analisis Anda setelah menyelesaikannya. Berikut contoh placeholder.)*
+Based on the analysis conducted in the notebook, here are the key findings:
 
--   **Innovation Radar**: Ditemukan bahwa produk **[Nama Produk/Tipe Produk]** menunjukkan tren pertumbuhan penjualan tertinggi, terutama di wilayah **[Nama Wilayah]**. Faktor pendorongnya diduga adalah **[Sebutkan Faktor, misal: kampanye influencer, rating positif]**.
--   **Trend Forecasting**: Model **[Nama Model, misal: ARIMA(p,d,q)]** berhasil memprediksi penjualan bulanan dengan tingkat MAPE sebesar **[X.XX]%**. Tren menunjukkan peningkatan permintaan untuk produk dengan ukuran **[Ukuran, misal: >300ml]** dan preferensi konsumen bergeser ke saluran penjualan **[Nama Channel, misal: Official Store]**.
--   **Product Cannibalization**: Peluncuran produk **[Produk Baru]** pada tanggal **[Tanggal]** terbukti **[mengurangi/tidak mengurangi]** penjualan produk **[Produk Lama]** sebesar rata-rata **[Y.YY]%** di channel yang sama, menunjukkan adanya efek kanibalisasi.
+### **1. Trend Forecasting Excellence**
+- **Model Performance**: Tree-based Gradient Boosting models significantly outperformed linear baselines. **LightGBM** emerged as the champion model with an **R² score of approximately 0.60** and a **MAPE of ~13.8%**.
+- **Primary Drivers**: Future sales are heavily influenced by temporal patterns (seasonality) and historical momentum (Lag features), as well as specific brand and product type attributes.
+
+### **2. Innovation Radar & Rising Stars**
+- **Lifecycle Dynamics**: The engineered feature `is_pre_launch` successfully captured significant market anticipation, identifying products that generated traction even before official release.
+- **Top Attributes**: Consumer demand is highest for larger packaging sizes (**340ml and 400ml**), and the **Shampoo** category remains the dominant volume driver.
+- **Growth Identification**: Products like Ponds and Sunsilk variants showed the strongest Year-over-Year growth, marking them as the portfolio's "Rising Stars."
+
+### **3. Strategic Cannibalization Insights**
+- **Parallel Growth**: The case studies (e.g., PC014 vs PC003) revealed **no significant cannibalization**. In fact, older products saw a slight sales increase (up to +9.16%) following new launches.
+- **Market Expansion**: New products appear to reach untapped segments or fulfill different consumer needs, effectively expanding the total category size rather than eroding existing shares.
 
 ---
 
-### 👥 Kontributor
+### 👥 Contributors
 
--   **[Nama Anda]** - *[Peran Anda, misal: Data Analyst, Project Lead]*
+1. Lathif Ramadhan
+2. Rafi Ramadhan
+3. Gilbert Mathew
 
 ---
 
